@@ -1,7 +1,7 @@
 mkdir maryam
 cd maryam touch one.txt two.txt three.txt four.txt
 mkdir BAD cd BAD touch bad.txt
-cd- mv one.txt /home/osc/Downloads
+cd - mv one.txt /home/osc/Downloads
 cd /home/osc/Downloads cp one.txt copy.txt
 cd  /home/osc/maryam
 nano two.txt maryam 
