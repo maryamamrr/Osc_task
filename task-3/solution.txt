@@ -1,0 +1,35 @@
+mkdir project_files
+cd project_files
+mkdir reports logs data
+cd reports
+touch report1.md report2.md
+cd /home/project_files/logs/
+touch system.log error.log file1.pdf file2.pdf
+cd /home/project_files/data/
+touch data.csv info.txt
+nano data.csv
+cd /home/project_files/logs/
+nano system.log
+cd /home/project_files/reports/
+nano report1.md
+cd /home/project_files/logs/
+tar -cvf logs_backup.tar /home/project_files/logs/
+mv logs_backup.tar /home/project_files/
+tar -xvf logs_backup.tar -c /home/project_files/logs/
+find ~ -type f -name "*.md"
+find ~/projects_files -type f -name "*.log"
+find ~/projects_files -type f -name "file1.pdf"
+find ~/projects_files -type f -iname "*.pdf"
+find ~/projects_files/logs -type f
+ln -s ~/project_files/data/data.csv ~/project_files/link_data.csv
+echo "new" >>/home/project_files/link_data.csv
+cat /home/project_files/link_data.csv
+rm /home/project_files/link_data.csv
+echo "summary start"> /home/project_files/summary.txt
+date >> /home/project_files/summary.txt
+wc -1 /home/project_files/summary.txt | tee -a /home/project_files/summary.txt
+wc -w /home/project_files/reports/report1.md
+wc -m /home/project_files/logs/system.log | tee -a /home/project_files/summary.txt
+find /home/project_files  -mindepth 1 |wc-1
+find /home/project_files -mindepth 1 | wc -1 | tee -a /home/project_files/summary.txt
+cat /home/project_files/summary.txt
