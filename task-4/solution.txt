@@ -1,18 +1,18 @@
-sudo useradd newuser
+sudo useradd -m newuser
 sudo groupadd newgroup
 usermod -a -G newgroup newuser
 group newuser
 mkdir task_dir
 cd /home/osc/task_dir
 touch sample.txt
-chmod 764 sample.txt
+sudo chmod 640 sample.txt
 sudo chown newuser sample.txt
 sudo chown :newgroup sample.txt
 sudo groupdel newgroup
 sudo userdel -r newuser
 sudo apt update
 sudo apt install lolcat
-echo "i love OSC">> lolcat
+echo "i love OSC"|lolcat
 sudo apt remove lolcat
 
 
