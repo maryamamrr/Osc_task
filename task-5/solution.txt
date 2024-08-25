@@ -1,0 +1,2 @@
+grep -o '[^, ]\+@[^, ]\+\.[a-zA-Z]\{2,\}' info.csv | sort | uniq > emails.txt
+ps -eo pid,cmd --sort=cmd --format pid,cmd > processes.txt
